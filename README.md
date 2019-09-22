@@ -15,3 +15,10 @@ normal - train: 588장, test: 30장
 abnormal - train: 786장, test: 30장
 
 ![capture2](./images/capture2.PNG)
+
+기본적인 모델은
+<br>
+https://pytorch.org/docs/stable/torchvision/models.html
+<br>
+에서 각 네트워크에서의 [SOURCE] 부분을 참조하여
+main.py의 Net Class 대신에 사용하세요(이미지 사이즈 및 피처 크기 조절 필수)
