@@ -1,0 +1,5 @@
+/data
+/codes/.pytest_cache
+/codes/make_data.py
+/codes/make_txt.py
+/codes/test.py
