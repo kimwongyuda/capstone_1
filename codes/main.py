@@ -137,15 +137,20 @@ def main():
         test_dataset, batch_size = args.batch_size, shuffle=False,
         num_workers= 4, pin_memory=True
     )
-
+    
+    #모델 만들기
     model = Net().to(device)
     print(model)
+    
+    #최적화 함수
     optimizer = optim.SGD(model.parameters(), lr=args.lr, momentum=args.momentum)
 
+    #트레인 및 테스트
     for epoch in range(1, args.epochs + 1):
         train(args, model, device, train_loader, optimizer, epoch)
         test(args, model, device, test_loader)
-
+    
+    #모델 저장
     if (args.save_model):
         torch.save(model.state_dict(), "mnist_cnn.pt")
 
